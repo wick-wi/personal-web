@@ -9,8 +9,12 @@ const navLinks = [
   { label: 'Contact', href: '/#contact' },
 ]
 
+// Profile photo: add your image to public/profile.jpg (or .png) to display here
+const PROFILE_IMAGE_PATH = '/profile.jpg'
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [profileImageError, setProfileImageError] = useState(false)
   const location = useLocation()
 
   const isHome = location.pathname === '/'
@@ -22,9 +26,21 @@ export default function Header() {
       <nav className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         <Link
           to="/"
-          className="text-slate-900 font-semibold text-lg hover:text-indigo-600 transition-colors"
+          className="flex items-center gap-3 text-slate-900 font-semibold text-lg hover:text-indigo-600 transition-colors"
         >
-          Portfolio
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-slate-200 ring-2 ring-slate-100">
+            {!profileImageError ? (
+              <img
+                src={PROFILE_IMAGE_PATH}
+                alt=""
+                className="h-full w-full object-cover"
+                onError={() => setProfileImageError(true)}
+              />
+            ) : (
+              <span className="text-sm font-semibold text-slate-500">WW</span>
+            )}
+          </span>
+          Wick Wijesekera
         </Link>
 
         {/* Desktop nav */}
