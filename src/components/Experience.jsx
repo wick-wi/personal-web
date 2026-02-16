@@ -4,18 +4,18 @@ import { ShieldCheck, Briefcase } from 'lucide-react'
 const roles = [
   {
     company: 'Capital One',
-    role: 'Your role title',
-    dates: 'Dates',
+    role: 'Product Manager',
+    dates: '2020 Oct - 2025 Sep',
     description:
-      'Short description of your impact and focus. Replace with your copy.',
+      'Optimized money movement pipelines for 2M+ customers, driving over millions of dollars in total NPV uplift through redesigned payment and application flows.',
     icon: ShieldCheck,
   },
   {
     company: 'LSEG',
-    role: 'Your role title',
-    dates: 'Dates',
+    role: 'Business Analyst',
+    dates: '2013 Mar - 2017 June',
     description:
-      'Short description of your impact and focus. Replace with your copy.',
+      'Directed the 0-1 modernization of multi-currency clearing and settlement systems saving millions of dollars in annual opex.',
     icon: Briefcase,
   },
 ]
