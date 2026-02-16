@@ -1,24 +1,29 @@
 /**
  * Single source of truth for portfolio projects.
  * Add new "satellite" apps by adding an object to this array.
+ *
+ * Images (add files in public/images/projects/):
+ * - icon: small logo (e.g. two-loonie-icon.png) — shown next to the title on the card.
+ * - image: cover/hero image (e.g. two-loonie.png) — shown in the card’s top banner (aspect-video).
  */
 export const projects = [
   {
     id: 'two-loonie',
     title: 'Two Loonie',
-    tagline: 'Full-Stack Wealth Dashboard (External App)',
-    liveUrl: 'https://example.com',
-    repoUrl: null,
-    image: null,
+    tagline: 'Canadian Wealth Dashboard',
+    liveUrl: 'https://wick-wi.github.io/two-loonies/',
+    repoUrl: 'https://github.com/wick-wi/two-loonies',
+    image: '/images/projects/two-loonie-project.png',
+    icon: '/images/projects/two-loonie-icon.png',
     sections: {
       problem:
-        'Placeholder: The problem this product solves. Replace with your copy.',
+        'Canadians do not have a single platform to track their wealth and investments.',
       productStrategy:
-        'Placeholder: The product strategy and approach. Replace with your copy.',
+        'A free tool to connect their bank/ investment accounts to track their wealth and "score". Premium features behind a subscription and monentize referral to other financial products.',
       technicalStack:
-        'Placeholder: Tech stack and architecture. Replace with your copy.',
+        'React Native for cross-platform mobile development, a Node.js (TypeScript) backend running on AWS, and PostgreSQL for secure data management, integrated with Flinks or Plaid for Canadian bank connectivity',
       keyLessons:
-        'Placeholder: Key lessons learned. Replace with your copy.',
+        'B2C is HARD!!!!',
     },
   },
 ]

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 
 export default function ProjectCard({ project, index }) {
-  const { id, title, tagline, image } = project
+  const { id, title, tagline, image, icon } = project
 
   return (
     <motion.article
@@ -28,9 +28,16 @@ export default function ProjectCard({ project, index }) {
           )}
         </div>
         <div className="p-6">
-          <h3 className="text-xl font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">
-            {title}
-          </h3>
+          <div className="flex items-center gap-3">
+            {icon && (
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-slate-100 border border-slate-200">
+                <img src={icon} alt="" className="h-6 w-6 object-contain" />
+              </div>
+            )}
+            <h3 className="text-xl font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">
+              {title}
+            </h3>
+          </div>
           <p className="mt-2 text-slate-600 text-sm">{tagline}</p>
           <span className="mt-4 inline-flex items-center gap-1 text-indigo-600 font-medium text-sm group-hover:gap-2 transition-all">
             View case study

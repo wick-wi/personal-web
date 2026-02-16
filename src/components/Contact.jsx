@@ -18,7 +18,7 @@ export default function Contact() {
         </p>
         <div className="flex flex-wrap gap-6">
           <a
-            href="mailto:you@example.com"
+            href="mailto:wick.wijesekera@gmail.com"
             className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
             aria-label="Email"
           >
@@ -26,7 +26,7 @@ export default function Contact() {
             Email
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/wick-wi/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-slate-300 text-slate-700 font-medium hover:border-indigo-300 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
