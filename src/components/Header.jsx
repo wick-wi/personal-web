@@ -24,9 +24,12 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
       <nav className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-        <Link
-          to="/"
+        <a
+          href="https://www.linkedin.com/in/wickw/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-3 text-slate-900 font-semibold text-lg hover:text-indigo-600 transition-colors"
+          aria-label="Wick Wijesekera on LinkedIn"
         >
           <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-slate-200 ring-2 ring-slate-100">
             {!profileImageError ? (
@@ -41,7 +44,7 @@ export default function Header() {
             )}
           </span>
           Wick Wijesekera
-        </Link>
+        </a>
 
         {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-8">
