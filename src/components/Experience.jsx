@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ShieldCheck, Briefcase } from 'lucide-react'
+import { ShieldCheck, Briefcase, School } from 'lucide-react'
 
 // Add company logos in public/images/experience/ (e.g. capital-one.png, lseg.png)
 // Use logo: '/images/experience/filename.png' — if omitted, the icon is shown
@@ -13,6 +13,15 @@ const roles = [
       'Optimized money movement pipelines for 2M+ customers, driving over millions of dollars in total NPV uplift through redesigned payment and application flows.',
     logo: '/images/experience/capital-one.png',
     icon: ShieldCheck,
+  },
+  {
+    company: 'INSEAD',
+    role: 'MBA',
+    dates: '2019 Aug - 2020 July',
+    description:
+      'MBA from one of the top 3 business schools in the world.',
+    logo: '/images/experience/INSEAD.png',
+    icon: School,
   },
   {
     company: 'LSEG',
@@ -73,7 +82,7 @@ export default function Experience() {
         viewport={{ once: true, margin: '-80px' }}
         className="text-2xl sm:text-3xl font-bold text-slate-900 mb-12"
       >
-        Experience
+        Experience & Education
       </motion.h2>
 
       <div className="relative">
