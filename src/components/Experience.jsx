@@ -29,7 +29,7 @@ const roles = [
     dates: '2013 Mar - 2017 June',
     description:
       'Directed the 0-1 modernization of multi-currency clearing and settlement systems saving millions of dollars in annual opex.',
-    logo: '/images/experience/lseg.png',
+    logo: '/images/experience/lseg1.png',
     icon: Briefcase,
   },
 ]
