@@ -3,12 +3,14 @@ import { motion } from 'framer-motion'
 import { ExternalLink, Github } from 'lucide-react'
 import { projects } from '../data/projects'
 
-const sectionTitles = {
+const defaultSectionTitles = {
   problem: 'The Problem',
   productStrategy: 'The Product Strategy',
   technicalStack: 'The Technical Stack',
   keyLessons: 'Key Lessons',
 }
+
+const sectionKeys = Object.keys(defaultSectionTitles)
 
 export default function ProjectDeepDive() {
   const { slug } = useParams()
@@ -30,7 +32,15 @@ export default function ProjectDeepDive() {
     )
   }
 
-  const { title, tagline, liveUrl, repoUrl, sections } = project
+  const {
+    title,
+    tagline,
+    liveUrl,
+    repoUrl,
+    sections,
+    liveButtonLabel,
+    repoButtonLabel,
+  } = project
 
   return (
     <motion.div
@@ -54,7 +64,7 @@ export default function ProjectDeepDive() {
             className="inline-flex items-center gap-2 w-full sm:w-auto justify-center px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
           >
             <ExternalLink size={20} aria-hidden />
-            Visit Live App
+            {liveButtonLabel ?? 'Visit Live App'}
           </a>
           {repoUrl && (
             <a
@@ -64,29 +74,34 @@ export default function ProjectDeepDive() {
               className="inline-flex items-center gap-2 px-6 py-3 border border-slate-300 text-slate-700 font-medium rounded-lg hover:border-indigo-300 hover:text-indigo-600 transition-colors"
             >
               <Github size={20} aria-hidden />
-              View code
+              {repoButtonLabel ?? 'View code'}
             </a>
           )}
         </div>
       </div>
 
       <div className="space-y-12">
-        {Object.entries(sectionTitles).map(([key, label]) => (
-          <motion.section
-            key={key}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.4 }}
-          >
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">
-              {label}
-            </h2>
-            <p className="text-slate-600 leading-relaxed whitespace-pre-line">
-              {sections[key] || '—'}
-            </p>
-          </motion.section>
-        ))}
+        {sectionKeys
+          .filter((key) => sections[key] != null && String(sections[key]).trim() !== '')
+          .map((key) => {
+            const label = project.sectionTitles?.[key] ?? defaultSectionTitles[key]
+            return (
+              <motion.section
+                key={key}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.4 }}
+              >
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">
+                  {label}
+                </h2>
+                <p className="text-slate-600 leading-relaxed whitespace-pre-line">
+                  {sections[key]}
+                </p>
+              </motion.section>
+            )
+          })}
       </div>
 
       <div className="mt-16 pt-8 border-t border-slate-200">

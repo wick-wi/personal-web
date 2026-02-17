@@ -40,7 +40,7 @@ export default function ProjectCard({ project, index }) {
           </div>
           <p className="mt-2 text-slate-600 text-sm">{tagline}</p>
           <span className="mt-4 inline-flex items-center gap-1 text-indigo-600 font-medium text-sm group-hover:gap-2 transition-all">
-            View case study
+            View Project Details
             <ArrowRight size={16} />
           </span>
         </div>
