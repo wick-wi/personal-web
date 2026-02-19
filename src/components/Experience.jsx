@@ -37,7 +37,7 @@ const roles = [
     role: 'Product Manager',
     dates: '2018 - 2019',
     description:
-      'Optimized functionality and UX for Campground management software. Owned discovery and lanuch of a analytics dashboard for US state parks, reducing 90% of manual reporting.',
+      'Optimized functionality and UX for Campground management software. Owned discovery and launch of a analytics dashboard for US state parks, reducing 90% of manual reporting.',
     logo: '/images/experience/aspira.png',
     icon: Tent,
   },
