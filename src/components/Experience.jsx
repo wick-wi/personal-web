@@ -1,36 +1,63 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ShieldCheck, Briefcase, School } from 'lucide-react'
+import { ShieldCheck, Briefcase, School, Blocks, Tent, School2 } from 'lucide-react'
 
 // Add company logos in public/images/experience/ (e.g. capital-one.png, lseg.png)
 // Use logo: '/images/experience/filename.png' — if omitted, the icon is shown
 const roles = [
   {
     company: 'Capital One',
-    role: 'Product Manager',
-    dates: '2020 Oct - 2025 Sep',
+    role: 'Senior Product Manager',
+    dates: '2020 - 2025',
     description:
-      'Optimized money movement pipelines for 2M+ customers, driving over millions of dollars in total NPV uplift through redesigned payment and application flows.',
+      'Owned strategy and roadmap for secured card platform, improving UX and driving funding rate lift resulting in $2.2M in NPV uplift. Optimized Application Funnel UX for 1.6M+ annual card applicants, driving 4M+ in annual NPV lift. ',
     logo: '/images/experience/capital-one.png',
     icon: ShieldCheck,
   },
   {
+    company: 'Blockchain Founders Fund',
+    role: 'Strategy Associate (Part Time)',
+    dates: '2020 - 2022',
+    description:
+      'Owned discovery and implementation of a 0→1 startup due diligence platform, automating review flows to cut cycle time from weeks to 3 days and increase analyst throughput 3×',
+    logo: '/images/experience/bff.png',
+    icon: Blocks,
+  },
+  {
     company: 'INSEAD',
     role: 'MBA',
-    dates: '2019 Aug - 2020 July',
+    dates: '2019 - 2020',
     description:
       'MBA from one of the top 3 business schools in the world.',
     logo: '/images/experience/INSEAD.png',
     icon: School,
   },
   {
-    company: 'LSEG',
-    role: 'Business Analyst',
-    dates: '2013 Mar - 2017 June',
+    company: 'Aspira',
+    role: 'Product Manager',
+    dates: '2018 - 2019',
     description:
-      'Directed the 0-1 modernization of multi-currency clearing and settlement systems saving millions of dollars in annual opex.',
+      'Optimized functionality and UX for Campground management software. Owned discovery and lanuch of a analytics dashboard for US state parks, reducing 90% of manual reporting.',
+    logo: '/images/experience/aspira.png',
+    icon: Tent,
+  },
+  {
+    company: 'LSEG',
+    role: 'Senior Business Analyst',
+    dates: '2014 - 2017',
+    description:
+      'Directed the 0-1 modernization of multi-currency/ multi-asset clearing and settlement platform saving $2M+ in annual opex.',
     logo: '/images/experience/lseg1.png',
     icon: Briefcase,
+  },
+  {
+    company: 'University of Moratuwa',
+    role: 'BSc in Electronics Engineering',
+    dates: '2009-2013',
+    description:
+      'Graduated with First Class Honours from the #1 Engineering University in Sri Lanka',
+    logo: '/images/experience/UoM.png',
+    icon: School2,
   },
 ]
 
