@@ -19,7 +19,7 @@ export const projects = [
     id: 'two-loonie',
     title: 'Two Loonie',
     tagline: 'Canadian Wealth Dashboard',
-    liveUrl: 'www.twoloonies.com',
+    liveUrl: 'www.twoloonies.ca',
     repoUrl: 'https://github.com/wick-wi/TwoLooniesV2',
     image: '/images/projects/two-loonie-project.png',
     icon: '',
